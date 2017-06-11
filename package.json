@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "ioredis": "^3.1.1"
+  },
+  "name": "nijinsky",
+  "description": "Sparse Redis Bitmap in Node.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "should": "^11.2.1",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expd/Nijinsky.git"
+  },
+  "keywords": [
+    "redis",
+    "bitmap",
+    "sparse",
+    "analytics"
+  ],
+  "author": "expd",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/expd/Nijinsky/issues"
+  },
+  "homepage": "https://github.com/expd/Nijinsky#readme"
+}
