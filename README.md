@@ -21,12 +21,22 @@ random_ids = _.times(10, function() {
 
 var event_id = 'my event id'
 
-redis_sb.setbit(event_id , random_ids[3] , function(err){...}) // can set a single value
-redis_sb.setbit(event_id , random_ids , function(err){...}) // can set multiple values
+// can set a single value
+redis_sb.setbit(event_id , random_ids[3] , function(err){})
 
-redis_sb.getbit(event_id , random_ids[3] , function(err , value) {...})
-redis_sb.bitcount(event_id , function(err,count) { }) // count == random_ids.length
+// can set multiple values
+redis_sb.setbit(event_id , random_ids , function(err){})
 
-redis_sb.getbits(event_id , function(err , ids) {...}) // ids.sort() equals random_ids.sort()
+redis_sb.getbit(event_id , random_ids[3] , function(err , value) {
+  // value == 1
+})
+
+redis_sb.bitcount(event_id , function(err,count) {
+  // count == random_ids.length
+}) 
+
+redis_sb.getbits(event_id , function(err , ids) {
+  // ids.sort() equals random_ids.sort()
+})
 
 ```
